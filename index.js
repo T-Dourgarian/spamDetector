@@ -15,7 +15,7 @@ let cleanedUsername = anyAscii(USERNAME);
 cleanedUsername = cleanstring(cleanedUsername); // returns 2 strings [string1, string2]
 
 
-
+// here and I am checking if the username contains any of the banned words, if it does, it gets marked as spam
 for (let i=0; i<cleanedUsername.length;i++) {
   let user = cleanedUsername[i];
 
