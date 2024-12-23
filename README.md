@@ -1,6 +1,6 @@
 # spamDetector
 
-to run the file
+to run the file <br/>
 npm install
 node index.js
 
