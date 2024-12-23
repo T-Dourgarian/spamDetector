@@ -6,7 +6,7 @@ const apiKey = process.env.AZ_KEY;
 const url = process.env.AZ_ENDPOINT
 
 
-const testUsernameML = function(username) {
+const testUsernameML = async function(username) {
     const MLdata = `{
         "input_data": {
           "columns": [
@@ -24,13 +24,14 @@ const testUsernameML = function(username) {
       };
       
       // Send the POST request
-    axios.post(url, MLdata, { headers })
-        .then(response => {
-          console.log("Response:", response.data);
-        })
-        .catch(error => {
-          console.log(error)
-        });
+   
+    try {
+        let response = await axios.post(url, MLdata, { headers }); 
+        return response.data
+    } catch(error) {
+        console.log(error);
+        return 0;
+    }
 }
 
 export default testUsernameML;

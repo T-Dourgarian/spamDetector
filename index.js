@@ -8,13 +8,12 @@ import bannedWords from './bannedWords.js';
 const USERNAME = "DиkаЯ_k0шkА_РыЖеЙ_МаSтИ"
 let isSpam = false;
 
-// testUsernameML(USERNAME);
 
+
+// testing string evaluation script
 let cleanedUsername = anyAscii(USERNAME);
 cleanedUsername = cleanstring(cleanedUsername); // returns 2 strings [string1, string2]
 
-
-console.log(cleanedUsername)
 
 
 for (let i=0; i<cleanedUsername.length;i++) {
@@ -29,8 +28,22 @@ for (let i=0; i<cleanedUsername.length;i++) {
   }
 }
 
+console.log("     ");
+
 if (isSpam) {
-  console.log(USERNAME, " is a spam username")
+  console.log(USERNAME, " is a spam username (OFFICIAL)")
 } else {
-  console.log(USERNAME, " is not a spam username")
+  console.log(USERNAME, " is not a spam username (OFFICIAL)")
+}
+
+console.log(" ");
+console.log("*****************")
+console.log(" ")
+// testing ML model
+const isSpamML = testUsernameML(USERNAME);
+
+if (isSpamML) {
+  console.log(USERNAME, " is a spam username (according to model) (UNOFFICIAL)")
+} else {
+  console.log(USERNAME, " is not a spam username (according to model) (UNOFFICIAL)")
 }
