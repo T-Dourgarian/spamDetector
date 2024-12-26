@@ -5,8 +5,9 @@ import bannedWords from './bannedWords.js';
 
 
 // ENTER TEST USERNAME HERE
-const USERNAME = "DиkаЯ_k0шkА_РыЖеЙ_МаSтИ"
-let isSpam = false;
+const USERNAME = "🅲🅷🅴🅲🅺 🅼🆈 🅳🅴🆂🅲🆁🅸🅿🆃🅸🅾🅽"
+
+let isSpam = false; // default 
 
 
 
@@ -36,14 +37,19 @@ if (isSpam) {
   console.log(USERNAME, " is not a spam username (OFFICIAL)")
 }
 
-console.log(" ");
-console.log("*****************")
-console.log(" ")
-// testing ML model
-const isSpamML = testUsernameML(USERNAME);
+console.log("     ");
 
-if (isSpamML) {
-  console.log(USERNAME, " is a spam username (according to model) (UNOFFICIAL)")
-} else {
-  console.log(USERNAME, " is not a spam username (according to model) (UNOFFICIAL)")
-}
+
+// I have used up the free credit from Azure, and this model doesn't really work well anyways so I am not going to pay to keep it going 
+// console.log(" ");
+// console.log("*****************")
+// console.log(" ")
+// // testing ML model
+
+// const isSpamML = testUsernameML(USERNAME);
+
+// if (isSpamML) {
+//   console.log(USERNAME, " is a spam username (according to model) (UNOFFICIAL)")
+// } else {
+//   console.log(USERNAME, " is not a spam username (according to model) (UNOFFICIAL)")
+// }
